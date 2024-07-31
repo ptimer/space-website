@@ -157,6 +157,14 @@ img {
   align-items: center;
 }
 
+.nav__logo {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  color: var(--white-color);
+  font-weight: var(--font-semi-bold);
+}
+
 .nav__logo img {
   width: 1.5rem;
 }
