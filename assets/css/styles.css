@@ -138,3 +138,83 @@ img {
 .main {
   overflow: hidden;
 }
+
+/*=============== HEADER & NAV ===============*/
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  height: var(--header-height);
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo img {
+  width: 1.5rem;
+}
+
+.nav__toggle,
+.nav__close {
+  display: inline-flex;
+  font-size: 1.5rem;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.nav__menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: hsla(238, 100%, 6%, .5);
+  backdrop-filter: blur(16px);
+  width: 80%;
+  height: 100%;
+  padding: 8rem 3.5rem 3.5rem;
+  transition: right .4s;
+}
+
+.nav__menu_active {
+  right: 0;
+}
+
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}
+
+.nav__link {
+  color: var(--white-color);
+  font-size: var(--h2-font-size);
+  font-family: var(--second-font);
+  transition: color .4s;
+}
+
+.nav__link:hover {
+  color: var(--first-color);
+}
+
+.nav__img,
+.nav__close {
+  position: absolute;
+}
+
+.nav__close {
+  top: 1rem;
+  right: 1.5rem;
+}
+
+.nav__img {
+  width: 300px;
+  right: -3rem;
+  bottom: 5rem;
+  z-index: -1;
+}
