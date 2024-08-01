@@ -471,3 +471,45 @@ img {
   width: 320px;
   justify-self: center;
 }
+
+/*=============== HISTORY ===============*/
+.history {
+  position: relative;
+}
+
+.history__container {
+  position: relative;
+  row-gap: 2.5rem;
+  grid-template-columns: 265px;
+  justify-content: center;
+}
+
+.history__card {
+  text-align: center;
+}
+
+.history__img {
+  width: 150px;
+  margin: 0 auto .75rem;
+}
+
+.history__description span {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
+}
+
+.history__planet-img {
+  position: absolute;
+}
+
+.history__planet-img:first-of-type {
+  width: 250px;
+  top: 10rem;
+  left: -8rem;
+}
+
+.history__planet-img:last-of-type {
+  width: 150px;
+  right: -5rem;
+  bottom: 6rem;
+}
