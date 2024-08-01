@@ -51,3 +51,13 @@ const swiperTravel = new Swiper('.js-travel-swiper', {
     }
 })
 
+/*=============== SHOW SCROLL UP ===============*/ 
+
+const handleScrollUp = () => {
+    const scrollUpEl = document.querySelector('.js-scroll-up');
+
+    window.scrollY >= 350 ? scrollUpEl.classList.add('scroll-up_active')
+                          : scrollUpEl.classList.remove('scroll-up_active');
+}
+
+window.addEventListener('scroll', handleScrollUp);
