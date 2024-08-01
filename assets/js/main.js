@@ -30,3 +30,24 @@ const handleBlurHeader = () => {
 
 window.addEventListener('scroll', handleBlurHeader);
 
+/*=============== SWIPER PLANETS ===============*/ 
+const swiperTravel = new Swiper('.js-travel-swiper', {
+    loop: true,
+    spaceBetween: '32',
+    grapCursor: true,
+    slidesPerView: 'auto',
+    centeredSlides: 'auto',
+    pagination: {
+        el: '.js-swiper-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        600: {
+            slidesPerView: 2,
+        },
+        900: {
+            slidesPerView: 3,
+        },
+    }
+})
+
