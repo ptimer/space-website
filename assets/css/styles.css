@@ -147,6 +147,7 @@ img {
   font-weight: var(--font-semi-bold);
   padding: 1rem 2rem;
   transition: box-shadow .4s;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -512,4 +513,22 @@ img {
   width: 150px;
   right: -5rem;
   bottom: 6rem;
+}
+
+/*=============== CONTACT ===============*/
+.contact__container {
+  padding-bottom: 2rem;
+}
+
+.contact__form {
+  display: grid;
+  row-gap: 1rem;
+}
+
+.contact__input {
+  width: 100%;
+  background-color: var(--body-color);
+  border: 2px solid var(--border-color);
+  padding: 1rem;
+  color: var(--white-color);
 }
