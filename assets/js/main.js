@@ -20,4 +20,13 @@ const navLinks = document.querySelectorAll('.js-nav-link');
 navLinks.forEach(navLink => {
     navLink.addEventListener('click', handleHideMenu);
 })
+/*=============== ADD BLUR HEADER ===============*/
+const handleBlurHeader = () => {
+    const header = document.querySelector('.js-header');
+
+    window.scrollY >= 50 ? header.classList.add('header_blur') 
+                         : header.classList.remove('header_blur');
+}
+
+window.addEventListener('scroll', handleBlurHeader);
 
