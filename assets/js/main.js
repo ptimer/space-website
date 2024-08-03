@@ -88,3 +88,58 @@ const handleNavActiveLink = () => {
 }
  
 window.addEventListener('scroll', handleNavActiveLink);
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '80px',
+    duration: 2500,
+    delay: 300,
+});
+
+sr.reveal('.js-home-data, .js-travel-swiper, .js-contact-container');
+
+sr.reveal('.js-home-img', {
+    origin: 'bottom',
+});
+
+sr.reveal('.js-home-ovni', {
+    delay: 800,
+});
+
+sr.reveal('.js-explore-img', {
+    origin: 'left',
+});
+
+sr.reveal('.js-explore-data', {
+    origin: 'right',
+});
+
+sr.reveal('.js-explore-planet', {
+    origin: 'right',
+    delay: 800,
+});
+
+sr.reveal('.js-history-card', {
+    interval: 100,
+});
+
+sr.reveal('.js-history-planet-img:first-of-type', {
+    origin: 'left', 
+    delay: 1000,
+});
+
+sr.reveal('.js-history-planet-img:last-of-type', {
+    origin: 'right', 
+    delay: 1200,
+});
+
+sr.reveal('.js-footer-planet-img:first-of-type', {
+    origin: 'bottom',
+    delay: 600,
+});
+
+sr.reveal('.js-footer-planet-img:last-of-type', {
+    delay: 800,
+});
