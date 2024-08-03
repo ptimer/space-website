@@ -21,9 +21,9 @@ navLinks.forEach(navLink => {
     navLink.addEventListener('click', handleHideMenu);
 })
 /*=============== ADD BLUR HEADER ===============*/
-const handleBlurHeader = () => {
-    const header = document.querySelector('.js-header');
+let header = document.querySelector('.js-header');
 
+const handleBlurHeader = () => {
     window.scrollY >= 50 ? header.classList.add('header_blur') 
                          : header.classList.remove('header_blur');
 }
@@ -51,13 +51,40 @@ const swiperTravel = new Swiper('.js-travel-swiper', {
     }
 })
 
-/*=============== SHOW SCROLL UP ===============*/ 
+/*=============== SHOW SCROLL UP ===============*/
+
+const scrollUpEl = document.querySelector('.js-scroll-up');
 
 const handleScrollUp = () => {
-    const scrollUpEl = document.querySelector('.js-scroll-up');
-
     window.scrollY >= 350 ? scrollUpEl.classList.add('scroll-up_active')
                           : scrollUpEl.classList.remove('scroll-up_active');
 }
 
 window.addEventListener('scroll', handleScrollUp);
+
+/*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
+const sections = document.querySelectorAll('.js-section');
+header = document.querySelector('.js-header');
+
+const handleNavActiveLink = () => {
+    const scrollDown = window.scrollY;
+
+    sections.forEach(section => {
+        const sectionId = section.dataset.sectionId;
+
+        if (sectionId === 'contact') return;
+
+        const sectionHeight = section.offsetHeight,
+            headerHeight = header.offsetHeight,
+            sectionTop = section.offsetTop - headerHeight,
+            navSectionLink = document.querySelector(`.js-nav-link[href*='#${sectionId}']`);
+
+        if (scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight) {
+            navSectionLink.classList.add('nav__link_active');
+        } else {
+            navSectionLink.classList.remove('nav__link_active');
+        }
+    });
+}
+ 
+window.addEventListener('scroll', handleNavActiveLink);
